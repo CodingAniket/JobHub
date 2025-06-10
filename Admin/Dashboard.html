@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JobHub Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALcAwQMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAABgcEBQMC/8QAPxAAAQMDAQMKBAIGCwAAAAAAAAECAwQFEQYSIdIHExYXMUFTVZOUFCIyYVFxCEJDUoGCFSMzcnORkqGx0fH/xAAaAQEBAQEBAQEAAAAAAAAAAAAABAIBBgcF/8QALxEBAAEBBgQDBwUAAAAAAAAAAAEDAgQRFFFSEhUx8CFBkRMiQmFxgaEFI8HR4f/aAAwDAQACEQMRAD8A6wAeNfQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABS9Cbr41F6j+EdCbr41F6j+EpydfbKPmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4QMnX2ycwuu+GggA9S8SAAAAAAAAHJdrnRWe3zV9zqGU9LCmXyP7vsidqr+CJvU6lVETK7kQw25TV3KvrZtJStmdpi3TI2R0T2tTG/+s39quwqJuXCdyZXNF3o+1mZtThZjrPfm5M4O25coWrdWPqYdA2maOjhztVTmNdI77JtfK1d/wBKZd3n56qtR3iSFb7quWZVdmric971jarcpsZXC793Yibl/DBoluttBaaeWz2elgt9Y1VqoGNyjJlTCbad6p2Ncnamfu1VUl5hnu1uqWIscVxppYZGSKm1FPCuebVP3kRZs/3CnMzY8KFmIj8+rOGrOYOSa6UasqLFqqakp5Y43QK1Xtkc93ai7KoiIib8pnv3bsil1hr7ROF1dbpLha0kWNahcbTURcZR6dy9qbab/wAS0sF2i/ovTnxkzWw0djZcKqVy42F5trGqv2VFm/0npTtprlbUpr1RJPUXXD22+XtaxqorUd+6jPlVy702lVEyqtRe2rxamcK1mLUfn1MNHoab1BbdS2xlwtFQksKrhzVTDo3d7XJ3L/6mUPUMLvdFcOSrWLb1aaeXo9UuYyeNHtVj1XKuYjc5TG9WqvZ2ZXfnbqOqgrqSGrpZEkgnjbJG9OxzVTKKTXijFjC3YnGzPT+paiX2ABM6AAAAAAAAAAAAAAAAAAAAAJHlWuz7PoS5zQu2ZpmJTsXOMba7Kqn32Vcv8DxuS20Utj0RTPqn1MiXDFWro2KqRK5qJ8ro8ubhETKqqd/3Pl+kC2R2iaZY87LbhGr8fhsSJ/yqFFpRXSaOtsun5qOio1p0ViT0L8NX9ZVTnG9rsrnvznvyXx7t0j5z4/Zn4nBda5aulVIalt6poX7cdZbHsWtoZETG0rE3PxlUXZRFwuyrHIqkmlwdLVx3KerpoIVrIquWZjtiF0jMRyStz9O3C5zHMX5myNYi/WmfT1O+O7KqSVNmvdQzci2+wTTyMVO7nWTqjF/NyGe8oLKqe10U7HLLTse/n3Jlyo5FRrVe9ZZdvGVT612NrCo1XIi0XalZtTFnpizMqG2TYt9PIyenrII4KTnY0nTm1+HibsMe/sYxszpJHqvckadsjULOy3OZsEldLURUjanZdU3u6IkPPInY2CJyoqRpldlX4RM5w9VUx/k5jqmVFdVI7m6RsC5kci7POIqYVFR7NlURy/PttRu1hXJtIi6Lp1YrdULVSSWy1zvVXfF3OyTOVyL3/ErUOaqLu/aKavVKLMzZ69994ESqdTWqj1NpWttlNVVTllYj1rHM3PVq7SKr3IjVblOxqoid2DyeQa7Pr9GOo5XZdQVDo279+w75k/3VyfkiFYq1T7PUTXStt1fQugesqU1A9WyR4XKInOv2splMJnJnf6P2y6fU8tO1W0j54eZTsREzJux+StJbPvXapGkxP8NecNgABA0AAAAAAAAAAAAAAAAAAAAAJnlIsz79oq50UDVdPzfOwoib1exUciJ+eMfxJfkivEV90iyGvoYqqa2ObTxMRUkcrUaitdsu3M3bs5RF2VNOMS1jaK/k71czVNmZO+x1E6PqqeCVWNa5VXLHIm7ZVVy3O5FXG7dm67TFSnNHz6x9dPuzPhOK71JSVFYyKnuS/FSz5SlstLI6OF+MZdO/c5zG5RV3NbvRNlzlbmUhoaqC6U8UD2zs+PjoudbGjGyvYjnz823sbFHG18LWpuRZJO8stOX+36ltlVX6flkfVzSpTyTzRYdGqJlFx+61HKqJ2Kud+VVV76W1QQXejhgYraa2USsjaq52nSKibSqva5EjXKrvXnF/EzFSaeNm1Hff+mGLL6JtU+hpZ6qWSKCGjoaiSeL+0hhli2Umb/hytlc7uVk0iKWmnbZUWupfR0kkduuLE5x9I1FWirWIu+WJn7Nd6IqM+lVTLXIrVXr09bfhrdpaSZiOzam0FRHjLXZja9FX7Isbk/nU+t0qbfprTz33mSVKW2vZ8NUNRXSNaq7LNlV7XIiq1e3KIqrucqGqlXjnhskQ4NdXhumtLVt1gt0FNclVsf1bG25y4y1zU+fG9cLhcJlUQ5uRCzPtWiIqiZqtluEq1GFTejMI1v8Amjdr+YiooK7lb1ks+aqLTNG5qSI+RyMerU/VbnCPdnfj6UXevZnc4o2RRsiiY1kbGo1rWphGonYiHa/7NL2XxT4z8tII8ZxfoAEDQAAAAAAAAAAAMC6wtWebr7aHgHWFqzzdfbQ8BjjhDn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9PnUQRVMEkFTEyWGRqtfHI1HNc1e1FRe1DBusLVnm6+2h4B1has83X20PAOMz9LSVFqPkglhnmrNE3SS3vlarX0r5XtarV7UR7d+PsufzQ41vnKvZXQNq7H8XHC7MroYUkdUJs7KbSsVcdiLuRFz2/geT1has83X20PAOsLVnm6+2h4CyP1C1MYVLMWvr19Wc7S8sXqw6k5UK+TYt2mVpoEjYyOGop9hI1av1I56t3ru7cpu7D7WfkmvF3nZVa5vUs0aPdIlJDMr97ly75l3MyvajU/ih4nWFqzzdfbQ8A6wtWebr7aHgOz+oTHhTsxZ+nX1M7S88W52y3UdqoYqK3U0dNTRJhkcaYRP+1/Fe86jAusLVnm6+2h4B1has83X20PARzUxnGWs/S0lvoMC6wtWebr7aHgHWFqzzdfbQ8Bzjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeADjgz9LSUuADD8cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==" type="image/x-icon">
+  <meta http-equiv="refresh" content="15">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+  
+    .navbar {
+      background: linear-gradient(to right, #343a40, #495057);
+    }
+  
+    .navbar-brand img {
+      transition: transform 0.3s ease;
+    }
+  
+    .navbar-brand:hover img {
+      transform: scale(1.1);
+    }
+  
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+  
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .table thead th {
+      background-color: #343a40;
+      color: white;
+    }
+  
+    .btn-outline-light:hover {
+      background-color: white;
+      color: #343a40;
+    }
+  
+    .modal-content {
+      border-radius: 0.8rem;
+    }
+  
+    .table-hover tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+  
+    .btn-custom {
+      border-radius: 25px;
+      padding: 6px 16px;
+    }
+  
+    .bi {
+      vertical-align: middle;
+      margin-right: 8px;
+    } 
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container-fluid">
+          <!-- Logo or Image -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALcAwQMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAAABgcEBQMC/8QAPxAAAQMDAQMKBAIGCwAAAAAAAAECAwQFEQYSIdIHExYXMUFTVZOUFCIyYVFxCEJDUoGCFSMzcnORkqGx0fH/xAAaAQEBAQEBAQEAAAAAAAAAAAAABAIBBgcF/8QALxEBAAEBBgQDBwUAAAAAAAAAAAEDAgQRFFFSEhUx8CFBkRMiQmFxgaEFI8HR4f/aAAwDAQACEQMRAD8A6wAeNfQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABS9Cbr41F6j+EdCbr41F6j+EpydfbKPmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4R0JuvjUXqP4Rk6+2TmF13wmgUvQm6+NReo/hHQm6+NReo/hGTr7ZOYXXfCaBS9Cbr41F6j+EdCbr41F6j+EZOvtk5hdd8JoFL0JuvjUXqP4QMnX2ycwuu+GggA9S8SAAAAAAAAHJdrnRWe3zV9zqGU9LCmXyP7vsidqr+CJvU6lVETK7kQw25TV3KvrZtJStmdpi3TI2R0T2tTG/+s39quwqJuXCdyZXNF3o+1mZtThZjrPfm5M4O25coWrdWPqYdA2maOjhztVTmNdI77JtfK1d/wBKZd3n56qtR3iSFb7quWZVdmric971jarcpsZXC793Yibl/DBoluttBaaeWz2elgt9Y1VqoGNyjJlTCbad6p2Ncnamfu1VUl5hnu1uqWIscVxppYZGSKm1FPCuebVP3kRZs/3CnMzY8KFmIj8+rOGrOYOSa6UasqLFqqakp5Y43QK1Xtkc93ai7KoiIib8pnv3bsil1hr7ROF1dbpLha0kWNahcbTURcZR6dy9qbab/wAS0sF2i/ovTnxkzWw0djZcKqVy42F5trGqv2VFm/0npTtprlbUpr1RJPUXXD22+XtaxqorUd+6jPlVy702lVEyqtRe2rxamcK1mLUfn1MNHoab1BbdS2xlwtFQksKrhzVTDo3d7XJ3L/6mUPUMLvdFcOSrWLb1aaeXo9UuYyeNHtVj1XKuYjc5TG9WqvZ2ZXfnbqOqgrqSGrpZEkgnjbJG9OxzVTKKTXijFjC3YnGzPT+paiX2ABM6AAAAAAAAAAAAAAAAAAAAAJHlWuz7PoS5zQu2ZpmJTsXOMba7Kqn32Vcv8DxuS20Utj0RTPqn1MiXDFWro2KqRK5qJ8ro8ubhETKqqd/3Pl+kC2R2iaZY87LbhGr8fhsSJ/yqFFpRXSaOtsun5qOio1p0ViT0L8NX9ZVTnG9rsrnvznvyXx7t0j5z4/Zn4nBda5aulVIalt6poX7cdZbHsWtoZETG0rE3PxlUXZRFwuyrHIqkmlwdLVx3KerpoIVrIquWZjtiF0jMRyStz9O3C5zHMX5myNYi/WmfT1O+O7KqSVNmvdQzci2+wTTyMVO7nWTqjF/NyGe8oLKqe10U7HLLTse/n3Jlyo5FRrVe9ZZdvGVT612NrCo1XIi0XalZtTFnpizMqG2TYt9PIyenrII4KTnY0nTm1+HibsMe/sYxszpJHqvckadsjULOy3OZsEldLURUjanZdU3u6IkPPInY2CJyoqRpldlX4RM5w9VUx/k5jqmVFdVI7m6RsC5kci7POIqYVFR7NlURy/PttRu1hXJtIi6Lp1YrdULVSSWy1zvVXfF3OyTOVyL3/ErUOaqLu/aKavVKLMzZ69994ESqdTWqj1NpWttlNVVTllYj1rHM3PVq7SKr3IjVblOxqoid2DyeQa7Pr9GOo5XZdQVDo279+w75k/3VyfkiFYq1T7PUTXStt1fQugesqU1A9WyR4XKInOv2splMJnJnf6P2y6fU8tO1W0j54eZTsREzJux+StJbPvXapGkxP8NecNgABA0AAAAAAAAAAAAAAAAAAAAAJnlIsz79oq50UDVdPzfOwoib1exUciJ+eMfxJfkivEV90iyGvoYqqa2ObTxMRUkcrUaitdsu3M3bs5RF2VNOMS1jaK/k71czVNmZO+x1E6PqqeCVWNa5VXLHIm7ZVVy3O5FXG7dm67TFSnNHz6x9dPuzPhOK71JSVFYyKnuS/FSz5SlstLI6OF+MZdO/c5zG5RV3NbvRNlzlbmUhoaqC6U8UD2zs+PjoudbGjGyvYjnz823sbFHG18LWpuRZJO8stOX+36ltlVX6flkfVzSpTyTzRYdGqJlFx+61HKqJ2Kud+VVV76W1QQXejhgYraa2USsjaq52nSKibSqva5EjXKrvXnF/EzFSaeNm1Hff+mGLL6JtU+hpZ6qWSKCGjoaiSeL+0hhli2Umb/hytlc7uVk0iKWmnbZUWupfR0kkduuLE5x9I1FWirWIu+WJn7Nd6IqM+lVTLXIrVXr09bfhrdpaSZiOzam0FRHjLXZja9FX7Isbk/nU+t0qbfprTz33mSVKW2vZ8NUNRXSNaq7LNlV7XIiq1e3KIqrucqGqlXjnhskQ4NdXhumtLVt1gt0FNclVsf1bG25y4y1zU+fG9cLhcJlUQ5uRCzPtWiIqiZqtluEq1GFTejMI1v8Amjdr+YiooK7lb1ks+aqLTNG5qSI+RyMerU/VbnCPdnfj6UXevZnc4o2RRsiiY1kbGo1rWphGonYiHa/7NL2XxT4z8tII8ZxfoAEDQAAAAAAAAAAAMC6wtWebr7aHgHWFqzzdfbQ8BjjhDn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9BgXWFqzzdfbQ8A6wtWebr7aHgHHBn6Wkt9PnUQRVMEkFTEyWGRqtfHI1HNc1e1FRe1DBusLVnm6+2h4B1has83X20PAOMz9LSVFqPkglhnmrNE3SS3vlarX0r5XtarV7UR7d+PsufzQ41vnKvZXQNq7H8XHC7MroYUkdUJs7KbSsVcdiLuRFz2/geT1has83X20PAOsLVnm6+2h4CyP1C1MYVLMWvr19Wc7S8sXqw6k5UK+TYt2mVpoEjYyOGop9hI1av1I56t3ru7cpu7D7WfkmvF3nZVa5vUs0aPdIlJDMr97ly75l3MyvajU/ih4nWFqzzdfbQ8A6wtWebr7aHgOz+oTHhTsxZ+nX1M7S88W52y3UdqoYqK3U0dNTRJhkcaYRP+1/Fe86jAusLVnm6+2h4B1has83X20PARzUxnGWs/S0lvoMC6wtWebr7aHgHWFqzzdfbQ8Bzjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeAdYWrPN19tDwDjgz9LSW+gwLrC1Z5uvtoeADjgz9LSUuADD8cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==" alt="Logo" width="40" height="40" class="rounded-circle me-2">
+            <span class="fw-bold">Admin Dashboard</span>
+          </a>
+      
+          <!-- Right side: Logout Button -->
+<div >
+  <button class="btn btn-outline-light mr-2" onclick="handleLogout()">Logout</button>
+</div>
+
+        </div>
+      </nav>
+    
+      <div class="container mt-4">
+        <div class="p-4 bg-light rounded-4 shadow-sm text-center">
+          <h2 class="fw-bold text-dark mb-1">👋 Welcome back, Admin!</h2>
+          <p class="text-muted fs-5">The system acknowledges its creator, Aniket Saha. Your administrative privileges are now active.</p>
+        </div>
+      </div>
+      
+
+  <div class="container mt-4">
+    <!-- Dashboard Cards -->
+    <div class="row text-center mb-4">
+      <div class="col-md-6">
+        <div class="card bg-primary text-white">
+          <div class="card-body">
+            <h5 class="card-title">Total Users</h5>
+            <p class="card-text fs-3" id="totalUsers">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-success text-white">
+          <div class="card-body">
+            <h5 class="card-title">Total Resumes</h5>
+            <p class="card-text fs-3" id="totalResumes">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Table -->
+    <h4 class="mb-3">Resume Submissions</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Location</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="resumeTableBody">
+          <!-- Filled via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Resume Details Modal -->
+  <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resumeModalLabel">Resume Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="resumeDetails">
+          <!-- Filled via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit User Modal -->
+  <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="editUserForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editUserModalLabel">Edit User Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="editIndex">
+          <div class="mb-3">
+            <label for="editFullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="editFullName" required>
+          </div>
+          <div class="mb-3">
+            <label for="editEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="editEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="editPhone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="editPhone" required>
+          </div>
+          <div class="mb-3">
+            <label for="editLocation" class="form-label">Location</label>
+            <input type="text" class="form-control" id="editLocation" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4>Users Management</h4>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Id</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- Filled via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Add User Modal -->
+  <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="addUserForm">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="newUserName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="newUserName" required>
+          </div>
+          <div class="mb-3">
+            <label for="newUserEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="newUserEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="newUserPhone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="newUserPhone" required>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-white mt-5 py-4">
+    <div class="container text-center">
+      <p class="mb-1 fw-semibold">© 2025 JobHub Admin Panel</p>
+      
+    </div>
+  </footer>
+  
+
+  <!-- Bootstrap and Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

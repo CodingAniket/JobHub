@@ -1,0 +1,97 @@
+.job-alert-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg, #fff);
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.job-alert-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color, #333);
+}
+
+.job-alert-container {
+    background-color: var(--card-secondary-bg, #f9f9f9);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#job-alert-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-secondary, #555);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--input-border, #ccc);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-bg, #fff);
+    color: var(--input-text, #333);
+    transition: all 0.3s ease;
+}
+
+.create-alert {
+    background-color: var(--primary-color, #4a90e2);
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-alert:hover {
+    background-color: var(--primary-hover, #3a7bc8);
+}
+
+@media (max-width: 768px) {
+    .job-alert-page {
+        padding: 1rem;
+    }
+}
+
+/* Dark theme variables - add to your existing :root/dark-theme */
+.dark-theme {
+    --card-bg: #2d2d2d;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-color: #e0e0e0;
+    --card-secondary-bg: #3a3a3a;
+    --text-secondary: #b0b0b0;
+    --input-border: #555;
+    --input-bg: #2d2d2d;
+    --input-text: #fff;
+    --primary-color: #3a7bc8;
+    --primary-hover: #4a90e2;
+}
+
+/* If not already in your :root */
+:root {
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-color: #333;
+    --card-secondary-bg: #f9f9f9;
+    --text-secondary: #555;
+    --input-border: #ccc;
+    --input-bg: #fff;
+    --input-text: #333;
+    --primary-color: #4a90e2;
+    --primary-hover: #3a7bc8;
+}

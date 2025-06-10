@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - JobHub</title>
+    <script src="register.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="job-application.css">
+    <link rel="stylesheet" href="enhance.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="transition.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="recruiters.html">Recruiters</a></li>
+                    <li><a href="companies.html">Companies</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="../Admin/index.html">Admin</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn login">Login</a>
+                    <a href="register.html" class="btn register">Register</a>
+                    <a href="resume-builder.html" class="btn resume-builder">Build Your Resume</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="job-application-page">
+        <section class="hero">
+            <h1>Apply for: Environmental Scientist</h1>
+            <p>Green Energy Solutions - Portland, OR</p>
+        </section>
+        <section class="application-form">
+            <form id="job-application-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover-letter">Cover Letter</label>
+                    <textarea id="cover-letter" name="cover-letter" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile (Optional)</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                </div>
+                <div class="form-group">
+                    <label for="portfolio">Portfolio Website (Optional)</label>
+                    <input type="url" id="portfolio" name="portfolio">
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Earliest Start Date</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="salary-expectation">Salary Expectation (USD/year)</label>
+                    <input type="number" id="salary-expectation" name="salary-expectation" min="0" step="1000" required>
+                </div>
+                <button type="submit" class="btn submit-application">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="job-application.js"></script>
+    <script src="navbar.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

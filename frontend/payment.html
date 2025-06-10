@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway - JobHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="enhance.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="recruiters.html">Recruiters</a></li>
+                    <li><a href="companies.html">Companies</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="../Admin/index.html">Admin</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn login">Login</a>
+                    <a href="register.html" class="btn register">Register</a>
+                    <a href="resume-builder.html" class="btn resume-builder">Build Your Resume</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="payment-page">
+        <h1>Complete Your Payment</h1>
+        <h1>Support: 9832962953</h1>
+        <div class="payment-container">
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="plan">Select Plan:</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Choose a plan</option>
+                        <option value="starter">Starter - $99/month</option>
+                        <option value="professional">Professional - $299/month</option>
+                        <option value="enterprise">Enterprise - Custom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Cardholder Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter cardholder name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Cardholder Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter cardholder email" required>
+                </div>
+                <button type="submit" class="btn pay-now">Pay Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>

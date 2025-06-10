@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Resume - JobHub</title>
+    <script src="register.js"></script>
+    <link rel="stylesheet" href="resume-builder.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="ai-assist.js"></script>
+    <link rel="stylesheet" href="enhance.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+              <div class="logo">
+                <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+              </div>
+              <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="recruiters.html">Recruiters</a></li>
+                <li><a href="companies.html">Companies</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="../Admin/index.html">Admin</a></li>
+              </ul>
+            <div class="auth-buttons">
+                <button class="btn theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                  </button>
+            </div>
+        </nav>
+    </header>
+    <main class="resume-builder">
+        <h1>Build Your Resume</h1>
+        <div class="progress-bar" aria-label="Form progress">
+            <div class="progress-step active" aria-current="step">Personal Info</div>
+            <div class="progress-step">Work Experience</div>
+            <div class="progress-step">Education</div>
+            <div class="progress-step">Skills</div>
+        </div>
+
+        <form id="resumeForm" action="./backend/resume_builder.php" method="post">
+            <div class="form-step active" id="personalInfo">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <button type="button" class="next-step">Next</button>
+            </div>
+
+            <div class="form-step" id="workExperience">
+                <h2>Work Experience</h2>
+                <div class="work-experience-container">
+                    <div class="form-group">
+                        <label for="jobTitle0">Job Title</label>
+                        <input type="text" id="jobTitle0" name="jobTitle[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="company0">Company</label>
+                        <input type="text" id="company0" name="company[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate0">Start Date</label>
+                        <input type="date" id="startDate0" name="startDate[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate0">End Date</label>
+                        <input type="date" id="endDate0" name="endDate[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobDescription0">Job Description</label>
+                        <textarea id="jobDescription0" name="jobDescription[]" rows="4"></textarea>
+                    </div>
+                </div>
+                <button type="button" class="add-more" data-target="work-experience">+ Add More Experience</button>
+                <div class="button-group">
+                    <button type="button" class="prev-step">Previous</button>
+                    <button type="button" class="next-step">Next</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="education">
+                <h2>Education</h2>
+                <div class="education-container">
+                    <div class="form-group">
+                        <label for="degree0">Degree</label>
+                        <input type="text" id="degree0" name="degree[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="institution0">Institution</label>
+                        <input type="text" id="institution0" name="institution[]">
+                    </div>
+                    <div class="form-group">
+                        <label for="graduationYear0">Graduation Year</label>
+                        <input type="number" id="graduationYear0" name="graduationYear[]" min="1900" max="2099">
+                    </div>
+                </div>
+                <button type="button" class="add-more" data-target="education">+ Add More Education</button>
+                <div class="button-group">
+                    <button type="button" class="prev-step">Previous</button>
+                    <button type="button" class="next-step">Next</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="skills">
+                <h2>Skills</h2>
+                <div class="form-group">
+                    <label for="skillsList">Skills (comma-separated)</label>
+                    <textarea id="skillsList" name="skillsList" rows="4" placeholder="e.g., JavaScript, React, Node.js"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="prev-step">Previous</button>
+                    <button type="submit" class="submit-resume">Submit Resume</button>
+                </div>
+            </div>
+        </form>
+        <div id="downloadSection" class="download-section" aria-live="polite"></div>
+    </main>
+    <button id="aiAssistButton" class="ai-assist-button">Get AI Assistance</button>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+              </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="resume-builder.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

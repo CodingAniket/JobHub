@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <title>Services - JobHub</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="register.js" defer></script>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="enhance.css">
+    <script src="transition.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="recruiters.html">Recruiters</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="../Admin/index.html">Admin</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            <a href="login.html" class="btn login">Login</a>
+            <a href="register.html" class="btn register">Register</a>
+            <a href="resume-builder.html" class="btn resume-builder">Build Your Resume</a>
+          </div>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="services-page">
+        <section class="hero">
+            <h1>Comprehensive Career and Recruitment Services</h1>
+            <p>Empowering job seekers and employers with cutting-edge tools and resources</p>
+        </section>
+
+        <section class="service-categories">
+            <div class="category job-seekers">
+                <h2>For Job Seekers</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="./images/Resume.png" alt="Resume Builder Icon" class="service-icon">
+                        <h3>Resume Builder</h3>
+                        <p>Create a professional resume with our easy-to-use builder</p>
+                        <a href="resume-builder.html" class="service-link">Build Your Resume</a>
+                    </div>
+                    <div class="service-card">
+                        <img src="./images/Career.png" alt="Career Advice Icon" class="service-icon">
+                        <h3>Career Advice</h3>
+                        <p>Get expert tips and guidance for your career journey</p>
+                        <a href="create-job-alert.html" class="service-link">Explore Advice</a>
+                    </div>
+                    <div class="service-card">
+                        <img src="./images/Job.png" alt="Job Alerts Icon" class="service-icon">
+                        <h3>Job Alerts</h3>
+                        <p>Receive notifications for jobs matching your preferences</p>
+                        <a href="create-job-alert.html" class="service-link">Set Up Alerts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-service">
+            <div class="featured-content">
+                <h2>Premium Resume Review</h2>
+                <p>Get your resume reviewed by industry experts and increase your chances of landing your dream job.</p>
+                <ul class="feature-list">
+                    <li>Personalized feedback from experienced professionals</li>
+                    <li>Suggestions for improvement in format and content</li>
+                    <li>Tips to highlight your key achievements</li>
+                    <li>24-hour turnaround time</li>
+                </ul>
+                <a href="career-advice.html" class="cta-button">Get Your Resume Reviewed</a>
+            </div>
+            <div class="featured-image">
+                <img src="./images/resumeReview.jpg" alt="Resume Review Process">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The resume builder helped me create a standout CV that landed me multiple interviews. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="./images/Software_Eng.jpg" alt="John Doe" class="author-image">
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"JobHub's applicant tracking system has streamlined our hiring process. We've reduced time-to-hire by 30%!"</p>
+                    <div class="testimonial-author">
+                        <img src="./images/Jone.jpg" alt="Jane Smith" class="author-image">
+                        <div class="author-info">
+                            <h4>Jane Smith</h4>
+                            <p>HR Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I create an account?</h3>
+                    <p>Click on the "Register" button in the top right corner and follow the prompts to set up your account.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is the resume builder really free?</h3>
+                    <p>Yes, our basic resume builder is completely free to use. For advanced features, consider upgrading to our Pro plan.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How often are new jobs added?</h3>
+                    <p>New jobs are added to our platform daily. Set up job alerts to get notified about the latest opportunities.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I upgrade or downgrade my plan?</h3>
+                    <p>Yes, you can change your plan at any time. Your billing will be adjusted accordingly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+              </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

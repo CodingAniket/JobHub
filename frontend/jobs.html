@@ -1,0 +1,362 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs - JobHub</title>
+    <link rel="stylesheet" href="jobs.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="register.js" defer></script>
+    <link rel="stylesheet" href="animation.css">
+    <script src="transition.js"></script>
+    <link rel="stylesheet" href="enhance.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img
+              src="images/icon.png"
+              alt="JobHub Logo"
+              width="150"
+              height="65"
+            />
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="recruiters.html">Recruiters</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="../Admin/index.html">Admin</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn theme-toggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="login.html" class="btn login">Login</a>
+            <a href="register.html" class="btn register">Register</a>
+            <a href="resume-builder.html" class="btn resume-builder"
+              >Build Your Resume</a
+            >
+          </div>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+     <main class="jobs-page">
+      <section class="hero">
+        <h1>Find Your Dream Job</h1>
+        <p>Explore thousands of job opportunities across various industries</p>
+      </section>
+      <section class="featured-jobs">
+        <h2>Featured Jobs</h2>
+        <div class="job-grid">
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmEKwJuSwvT3hPDXDG5BACu18Tcq8l7Kl4Sw&s"
+                alt="Tech Innovators Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <p class="company-name">Tech Innovators</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">San Francisco, CA</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$120,000 - $160,000 per year</p>
+              <p class="job-description">
+                We're seeking a talented Senior Software Engineer to join our
+                innovative team...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job-application.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="https://media.istockphoto.com/id/951820442/vector/green-eco-power-plug.jpg?s=612x612&w=0&k=20&c=9pAfWPOWsvtHS6LRpehZMGZeyXFvJthdOdhv0Y09BRw="
+                alt="Green Energy Solutions Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>Environmental Scientist</h3>
+                <p class="company-name">Green Energy Solutions</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">Portland, OR</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$80,000 - $100,000 per year</p>
+              <p class="job-description">
+                Join our team of environmental experts and contribute to
+                sustainable energy projects...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job2.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="data:image/png;base64,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"
+                alt="Global Finance Corp Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>Financial Analyst</h3>
+                <p class="company-name">Global Finance Corp</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">New York, NY</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$90,000 - $120,000 per year</p>
+              <p class="job-description">
+                We're looking for a skilled Financial Analyst to join our team
+                and provide valuable insights...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job3.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGTdNZJC0JxKqCahVuM5bR1NKV7y5eE14OvA&s"
+                alt="HealthTech Innovations Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>UX/UI Designer</h3>
+                <p class="company-name">HealthTech Innovations</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">Boston, MA</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$85,000 - $110,000 per year</p>
+              <p class="job-description">
+                Join our creative team and design intuitive user experiences for
+                healthcare applications...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job4.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGTdNZJC0JxKqCahVuM5bR1NKV7y5eE14OvA&s"
+                alt="HealthTech Innovations Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>UX/UI Designer</h3>
+                <p class="company-name">HealthTech Innovations</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">Boston, MA</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$85,000 - $110,000 per year</p>
+              <p class="job-description">
+                Join our creative team and design intuitive user experiences for
+                healthcare applications...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job4.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-card-header">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGTdNZJC0JxKqCahVuM5bR1NKV7y5eE14OvA&s"
+                alt="HealthTech Innovations Logo"
+                class="company-logo"
+              />
+              <div>
+                <h3>UX/UI Designer</h3>
+                <p class="company-name">HealthTech Innovations</p>
+              </div>
+            </div>
+            <div class="job-card-body">
+              <p class="job-location">Boston, MA</p>
+              <p class="job-type">Full-time</p>
+              <p class="job-salary">$85,000 - $110,000 per year</p>
+              <p class="job-description">
+                Join our creative team and design intuitive user experiences for
+                healthcare applications...
+              </p>
+            </div>
+            <div class="job-card-footer">
+              <a href="job4.html" class="apply-button">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="job-categories">
+        <h2>Available Jobs In Different Sectors</h2>
+        <div class="category-grid">
+          <a class="category-card">
+            <img
+              src="./images/Tech.png"
+              alt="Technology Icon"
+              class="category-icon"
+            />
+            <h3>Technology</h3>
+            <p>1,234 jobs</p>
+          </a>
+          <a class="category-card">
+            <img
+              src="./images/Health.png"
+              alt="Healthcare Icon"
+              class="category-icon"
+            />
+            <h3>Healthcare</h3>
+            <p>987 jobs</p>
+          </a>
+          <a class="category-card">
+            <img
+              src="./images/Finance.png"
+              alt="Finance Icon"
+              class="category-icon"
+            />
+            <h3>Finance</h3>
+            <p>876 jobs</p>
+          </a>
+          <a class="category-card">
+            <img
+              src="./images/Education.png"
+              alt="Education Icon"
+              class="category-icon"
+            />
+            <h3>Education</h3>
+            <p>765 jobs</p>
+          </a>
+          <a class="category-card">
+            <img
+              src="./images/Market.png"
+              alt="Marketing Icon"
+              class="category-icon"
+            />
+            <h3>Marketing</h3>
+            <p>654 jobs</p>
+          </a>
+          <a class="category-card">
+            <img
+              src="./images/Engineering.png"
+              alt="Engineering Icon"
+              class="category-icon"
+            />
+            <h3>Engineering</h3>
+            <p>543 jobs</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="job-seeker-tools">
+        <h2>Job Seeker Tools</h2>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <img
+              src="./images/Resume.png"
+              alt="Resume Builder Icon"
+              class="tool-icon"
+            />
+            <h3>Resume Builder</h3>
+            <p>Create a professional resume that stands out</p>
+            <a href="resume-builder.html" class="tool-link">Build Your Resume</a>
+          </div>
+          <div class="tool-card">
+            <img
+              src="./images/Career.png"
+              alt="Career Advice Icon"
+              class="tool-icon"
+            />
+            <h3>Career Advice</h3>
+            <p>Get expert tips and guidance for your job search</p>
+            <a href="InterviewPrep.html" class="tool-link">Read Articles</a>
+          </div>
+          <div class="tool-card">
+            <img
+              src="./images/Job.png"
+              alt="Job Alert Icon"
+              class="tool-icon"
+            />
+            <h3>Job Alert</h3>
+            <p>Being ready to grab your opportunities</p>
+            <a href="create-job-alert.html" class="tool-link">Set Now</a>
+          </div>
+        </div>
+      </section>
+      <section class="job-seeker-cta">
+        <h2>Take the Next Step in Your Career</h2>
+        <p>
+          Create a free account to apply for jobs, save your favorite listings,
+          and get personalized job recommendations.
+        </p>
+        <a href="register.html" class="cta-button">Create Your Account</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Job Seekers</h4>
+          <ul>
+            <li><a href="index.html">Search Jobs</a></li>
+            <li><a href="create-job-alert.html">Create Job Alert</a></li>
+            <li><a href="career-advice.html">Career Advice</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>JobHub</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2025 JobHub. All rights reserved.</div>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>

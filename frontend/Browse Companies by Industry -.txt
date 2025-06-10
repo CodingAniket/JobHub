@@ -1,0 +1,12 @@
+// functionality
+Tracking user -> done
+Job search -> done
+Resume Building -> done
+Payment gateway -> Modify...
+Create Job alert -> Aniket
+Login-> done 
+register -> done 
+encryption -> done
+Contact -> not done
+documentation -> PENDING.....
+add dark theme -> Aniket 

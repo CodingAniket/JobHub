@@ -1,0 +1,54 @@
+:root {
+    --btn-primary-bg: #007bff; /* Example primary button color */
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job-card, .company-card {
+    transition: all 0.3s ease;
+  }
+  
+  .job-card:hover, .company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input {
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    box-shadow: 0 0 0 2px var(--btn-primary-bg);
+  }
+  
+  .category {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .category:hover {
+    border-color: var(--btn-primary-bg);
+    transform: scale(1.05);
+  }

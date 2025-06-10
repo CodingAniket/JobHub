@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <title>Recruiters - JobHub</title>
+    <link rel="stylesheet" href="recruiters.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="register.js" defer></script>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="enhance.css">
+    <script src="transition.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="recruiters.html">Recruiters</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="../Admin/index.html">Admin</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            <a href="login.html" class="btn login">Login</a>
+            <a href="register.html" class="btn register">Register</a>
+            <a href="resume-builder.html" class="btn resume-builder">Build Your Resume</a>
+          </div>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="recruiters-page">
+        <section class="hero">
+            <h1>Empower Your Recruitment Process</h1>
+            <p>Access top talent and streamline your hiring with JobHub's advanced recruitment tools</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </section>
+
+        <section class="benefits">
+            <h2>Why Choose JobHub for Recruitment?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <img src="./images/Large Pool.png" alt="Large Talent Pool Icon" class="benefit-icon">
+                    <h3>Large Talent Pool</h3>
+                    <p>Access millions of qualified candidates across various industries and skill sets.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="./images/Efficiant Search.png" alt="Efficient Hiring Icon" class="benefit-icon">
+                    <h3>Efficient Hiring</h3>
+                    <p>Streamline your recruitment process with our intuitive tools and features.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="./images/Data Driven Icon.png" alt="Data-Driven Insights Icon" class="benefit-icon">
+                    <h3>Data-Driven Insights</h3>
+                    <p>Make informed decisions with our comprehensive analytics and reporting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Powerful Features for Recruiters</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>Advanced Search</h3>
+                    <p>Find candidates quickly with our powerful search and filtering options.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Applicant Tracking</h3>
+                    <p>Manage your hiring pipeline efficiently with our built-in ATS.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Interview Scheduling</h3>
+                    <p>Seamlessly schedule and manage interviews with integrated calendar features.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Collaborative Hiring</h3>
+                    <p>Involve team members in the hiring process with collaborative tools.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Branded Career Pages</h3>
+                    <p>Create custom career pages to showcase your company culture and open positions.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Mobile Recruiting</h3>
+                    <p>Manage your recruitment process on-the-go with our mobile app.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Recruiters Say About Us</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p>"JobHub has revolutionized our hiring process. We've reduced our time-to-hire by 40% and found amazing candidates!"</p>
+                    <div class="testimonial-author">
+                        <img src="./images/Hr.jpg" alt="Sarah Johnson" class="author-image">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>HR Manager, Tech Innovators</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The quality of candidates we've found through JobHub is outstanding. It's become an essential tool for our recruitment team."</p>
+                    <div class="testimonial-author">
+                        <img src="./images/TeamLead.jpg" alt="Michael Chen" class="author-image">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Talent Acquisition Lead, Global Finance Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Choose the Right Plan for Your Needs</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">$99<span>/month</span></p>
+                    <ul class="features-list">
+                        <li>Up to 5 job postings</li>
+                        <li>Basic candidate search</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="payment.html" class="cta-button secondary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <p class="price">$299<span>/month</span></p>
+                    <ul class="features-list">
+                        <li>Up to 20 job postings</li>
+                        <li>Advanced candidate search</li>
+                        <li>Applicant tracking system</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="payment.html" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">Custom</p>
+                    <ul class="features-list">
+                        <li>Unlimited job postings</li>
+                        <li>Advanced Applicants matching</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="payment.html" class="cta-button secondary">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How do I get started with JobHub?</h3>
+                    <p>Simply sign up for an account, choose your plan, and start posting jobs or searching for candidates right away.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I upgrade or downgrade my plan?</h3>
+                    <p>Yes, you can change your plan at any time. Your billing will be adjusted accordingly.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a free trial available?</h3>
+                    <p>We offer a 14-day free trial for our Professional plan so you can experience all the features before committing.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does the AI-powered matching work?</h3>
+                    <p>Our AI analyzes job descriptions and candidate profiles to suggest the best matches based on skills, experience, and other relevant factors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Transform Your Recruitment Process?</h2>
+            <p>Join thousands of successful recruiters who trust JobHub for their hiring needs.</p>
+            <a href="#" class="cta-button">Get Started Today</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+              </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

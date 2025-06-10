@@ -1,0 +1,258 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Expert profile styles */
+.expert-profile-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+.expert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.expert-info {
+    display: flex;
+    align-items: center;
+}
+
+.expert-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.expert-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.expert-title {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.expert-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a90e2;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.expert-cta {
+    text-align: right;
+}
+
+.cta-button, .book-service-button {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .book-service-button:hover {
+    background-color: #3a7bc8;
+}
+
+.expert-bio, .expert-specialties, .expert-services, .expert-testimonials, .expert-availability {
+    margin-bottom: 3rem;
+}
+
+.expert-bio h2, .expert-specialties h2, .expert-services h2, .expert-testimonials h2, .expert-availability h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.expert-specialties ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.expert-specialties li {
+    background-color: #f0f7ff;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.service-cards, .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card, .testimonial-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-duration, .service-price {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.book-service-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.testimonial-author {
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.calendar-widget {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .auth-buttons {
+        margin-top: 1rem;
+    }
+
+    .expert-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .expert-info {
+        flex-direction: column;
+    }
+
+    .expert-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .expert-stats {
+        justify-content: center;
+    }
+
+    .expert-cta {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .service-cards, .testimonial-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .footer-section {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+.dark-theme .expert-specialties li, .service-card, .testimonial-card {
+    background-color: #1E1E1E;
+}

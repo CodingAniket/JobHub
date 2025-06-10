@@ -1,0 +1,291 @@
+.header1 {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tips h2 {
+    font-size: 1.5rem;
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+.tips p {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #777;
+}
+.resume-builder1 {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login {
+    background-color: #fff;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+}
+
+.register {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .auth-buttons {
+        margin-top: 1rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+}
+/* Resume Builder Styles */
+.resume-builder {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume-builder h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.progress-step {
+    position: relative;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    z-index: 2;
+}
+
+.progress-step.active {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.next-step,
+.prev-step,
+.submit-resume {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-step,
+.submit-resume {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.next-step:hover,
+.submit-resume:hover {
+    background-color: #3a7bc8;
+}
+
+.prev-step {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.prev-step:hover {
+    background-color: #e0e0e0;
+}
+
+.add-more {
+    background-color: transparent;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-more:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .resume-builder {
+        padding: 1rem;
+    }
+
+    .progress-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-step {
+        margin-bottom: 0.5rem;
+    }
+
+    .progress-bar::before {
+        display: none;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .next-step,
+    .prev-step,
+    .submit-resume {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

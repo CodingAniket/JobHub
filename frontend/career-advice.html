@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advice - JobHub</title>
+    <link rel="stylesheet" href="career-advice.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="register.js" defer></script>
+    <link rel="stylesheet" href="animation.css">
+    <script src="transition.js"></script>
+    <link rel="stylesheet" href="enhance.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="images/icon.png" alt="JobHub Logo" width="150" height="65">
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="recruiters.html">Recruiters</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="../Admin/index.html">Admin</a></li>
+          </ul>
+          <div class="nav-buttons">
+            <button class="btn theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            <a href="login.html" class="btn login">Login</a>
+            <a href="register.html" class="btn register">Register</a>
+            <a href="resume-builder.html" class="btn resume-builder">Build Your Resume</a>
+          </div>
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="career-advice-page">
+        <section class="hero">
+            <h1>Career Advice</h1>
+            <p>Expert insights and resources to help you succeed in your career</p>
+        </section>
+
+        <section class="featured-articles">
+            <h2>Featured Articles</h2>
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="./images/Resume.png" alt="Resume Writing Tips" class="article-image">
+                    <div class="article-content">
+                        <h3>10 Resume Writing Tips to Land Your Dream Job</h3>
+                        <p>Learn how to craft a compelling resume that stands out to employers and showcases your skills effectively.</p>
+                        <a href="tips.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="./images/TeamLead.jpg" alt="Interview Preparation" class="article-image">
+                    <div class="article-content">
+                        <h3>Ace Your Next Interview: Essential Preparation Tips</h3>
+                        <p>Discover proven strategies to prepare for job interviews and increase your chances of success.</p>
+                        <a href="InterviewPrep.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="./images/CareerChage.png" alt="Career Change Guide" class="article-image">
+                    <div class="article-content">
+                        <h3>The Ultimate Guide to Changing Careers Successfully</h3>
+                        <p>Considering a career change? Follow our step-by-step guide to make a smooth transition into a new field.</p>
+                        <a href="guide.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="career-resources">
+            <h2>Essential Career Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <img src="./images/Resume.png" alt="Resume Builder Icon" class="resource-icon">
+                    <h3>Resume Builder</h3>
+                    <p>Create a professional resume in minutes with our easy-to-use tool.</p>
+                    <a href="resume-builder.html" class="resource-link">Build Your Resume</a>
+                </div>
+                <div class="resource-card">
+                    <img src="./images/Career.png" alt="Job Market Trends Icon" class="resource-icon">
+                    <h3>Job Market Trends</h3>
+                    <p>Stay informed about the latest trends and insights in your industry.</p>
+                    <a href="#" class="resource-link">Explore Trends</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-experts">
+            <h2>Meet Our Career Experts</h2>
+            <div class="expert-grid">
+                <div class="expert-card">
+                    <img src="./images/Jone.jpg" alt="Jane Doe" class="expert-image">
+                    <h3>Jane Doe</h3>
+                    <p>Career Coach & Resume Specialist</p>
+                    <a href="expert-profile-1.html" class="expert-link">View Profile</a>
+                </div>
+                <div class="expert-card">
+                    <img src="./images/Software_Eng.jpg" alt="John Smith" class="expert-image">
+                    <h3>John Smith</h3>
+                    <p>HR Consultant & Interview Expert</p>
+                    <a href="expert-profile-2.html" class="expert-link">View Profile</a>
+                </div>
+                <div class="expert-card">
+                    <img src="./images/Female.jpg" alt="Emily Brown" class="expert-image">
+                    <h3>Emily Brown</h3>
+                    <p>Career Transition Specialist</p>
+                    <a href="expert-profile-3.html" class="expert-link">View Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-advice-cta">
+            <h2>Take Your Career to the Next Level</h2>
+            <p>Sign up for our newsletter to receive the latest career advice and job opportunities directly in your inbox.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Job Seekers</h4>
+                <ul>
+                    <li><a href="index.html">Search Jobs</a></li>
+                    <li><a href="create-job-alert.html">Create Job Alert</a></li>
+                    <li><a href="career-advice.html">Career Advice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+              </div>
+            <div class="footer-section">
+                <h4>JobHub</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 JobHub. All rights reserved.
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
