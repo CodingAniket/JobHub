@@ -161,7 +161,7 @@ app.post('/api/ai-assist', async (req, res) => {
     const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', { prompt });
 
     res.json(aiRes.data);
-  } } catch (error) {
+  } catch (error) {
   console.error('🛑 AI Proxy error:', error.message);
 
   if (error.response) {
