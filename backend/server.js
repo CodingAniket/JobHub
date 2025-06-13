@@ -150,18 +150,6 @@ app.post('/api/ai-assist', async (req, res) => {
   try {
     const systemPrompt = "You are a professional CV and career assistant. Only answer questions related to CV building, resume improvement, and career advice. Be concise, clear, and professional.";
     const { question } = req.body;
-    const normalized = question.trim().toLowerCase();
-    // Check for "who made you" or similar queries
-    if (
-      normalized.includes('who made you') ||
-      normalized.includes('who created you') ||
-      normalized.includes('your creator') ||
-      normalized.includes('who is your developer')
-    ) {
-      return res.json({
-        response: "I was made by Aniket Saha who is a high-IQ full-stack developer trained in the MERN stack, known for turning complex problems into elegant solutions. His analytical thinking, refined through a rare blend of self-discipline and natural cognitive strength, empowers him to craft secure, scalable, and impactful applications. He’s not just learning code—he’s engineering progress"
-      });
-    }
     let prompt= systemPrompt + "\n\nUser: " + question
     const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', {prompt});
     // Forward the AI response to the frontend
