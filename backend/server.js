@@ -148,7 +148,6 @@ app.use((err, req, res, next) => {
 
 app.post('/api/ai-assist', async (req, res) => {
   try {
-    const systemPrompt = "You are a professional CV and career assistant. Only answer questions related to CV building, resume improvement, and career advice. Be concise, clear, and professional.";
     const { question } = req.body;
 
     // Validate input
@@ -156,9 +155,8 @@ app.post('/api/ai-assist', async (req, res) => {
       return res.status(400).json({ error: "Invalid or missing 'question' in request body" });
     }
 
-    const prompt = systemPrompt + "\n\nUser: " + question.trim();
 
-    const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', { prompt });
+    const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', { question });
 
     res.json(aiRes.data);
   } catch (error) {
