@@ -150,15 +150,23 @@ app.post('/api/ai-assist', async (req, res) => {
   try {
     const systemPrompt = "You are a professional CV and career assistant. Only answer questions related to CV building, resume improvement, and career advice. Be concise, clear, and professional.";
     const { question } = req.body;
-    let prompt= systemPrompt + "\n\nUser: " + question
-    const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', {prompt});
-    // Forward the AI response to the frontend
+
+    // Validate input
+    if (!question || typeof question !== 'string' || question.trim() === '') {
+      return res.status(400).json({ error: "Invalid or missing 'question' in request body" });
+    }
+
+    const prompt = systemPrompt + "\n\nUser: " + question.trim();
+
+    const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', { prompt });
+
     res.json(aiRes.data);
   } catch (error) {
     console.error('AI Proxy error:', error.message);
     res.status(500).json({ error: 'Failed to fetch AI response' });
   }
 });
+
 
 // Start the server
 app.listen(PORT, () => {
