@@ -161,10 +161,20 @@ app.post('/api/ai-assist', async (req, res) => {
     const aiRes = await axios.post('https://gemini-app-iota-two.vercel.app/getResponse', { prompt });
 
     res.json(aiRes.data);
-  } catch (error) {
-    console.error('AI Proxy error:', error.message);
-    res.status(500).json({ error: 'Failed to fetch AI response' });
+  } } catch (error) {
+  console.error('🛑 AI Proxy error:', error.message);
+
+  if (error.response) {
+    console.error('📡 Response Status:', error.response.status);
+    console.error('📄 Response Data:', error.response.data);
+  } else if (error.request) {
+    console.error('🌐 No response received from AI server:', error.request);
+  } else {
+    console.error('❗Unexpected Error:', error);
   }
+
+  res.status(500).json({ error: 'Failed to fetch AI response' });
+}
 });
 
 
